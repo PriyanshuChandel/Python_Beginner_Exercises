@@ -1,3 +1,4 @@
+# Create a dictionary which asks user input and print the result of the input.
 dict1 = {"abandoned": "having been deserted or left.",
          "phenomenal": "remarkable or exceptional, especially exceptionally good.",
          "chaos": "complete disorder and confusion.", "entrepreneur":
