@@ -1,4 +1,4 @@
-# Exercise - 2, Faulty Calculator
+# Faulty Calculator
 # design a calculator which will correctly solve all calculation except following one.
 # 45*3 = 555, 56+9 = 77, 56/6 = 4
 # take input as operator and two numbers from user and return the result
