@@ -15,7 +15,7 @@ def getdate():
 
 # Solution
 # file tut32_harry_exercise.txt, tut32_harry_diet.txt, tut32_rohan_exercise.txt, tut32_rohan_diet.txt, tut32_hammad_exercise.txt and tut32_hammad_diet.txt created for this purpose.
-# below strings are created just not to type everytime.
+# below strings are created just not type everytime.
 lastmess1 = "Congratulations! You've logged your exercise details successfully."
 lastmess2 = "Congratulations! You've logged your diet details successfully."
 lastmess3 = "Enter valid input."
@@ -40,20 +40,14 @@ if input1 == 1:
         input3 = int(input(commoninput1))
         if input3 == 1:
             print("Hi Harry", commoninput2)
-            f = open("tut32_harry_exercise.txt", "a")   #
-            f.write(str(getdate()))
-            f.write(" ")
-            f.write(input())
-            f.write("\n")
+            f = open("tut32_harry_exercise.txt", "a")
+            f.write(str(getdate()) + " " + input() + "\n")
             print(lastmess1)
             f.close()
         elif input3 == 2:
             print("Hi Harry", commoninput3)
             f = open("tut32_harry_diet.txt", "a")
-            f.write(str(getdate()))
-            f.write(" ")
-            f.write(input())
-            f.write("\n")
+            f.write(str(getdate()) + " " + input() + "\n")
             print(lastmess2)
             f.close()
         else:
@@ -63,19 +57,13 @@ if input1 == 1:
         if input4 == 1:
             print("Hi Rohan", commoninput2)
             f = open("tut32_rohan_exercise.txt", "a")
-            f.write(str(getdate()))
-            f.write(" ")
-            f.write(input())
-            f.write("\n")
+            f.write(str(getdate()) + " " + input() + "\n")
             print(lastmess1)
             f.close()
         elif input4 == 2:
             print("Hi Rohan", commoninput3)
             f = open("tut32_rohan_diet.txt", "a")
-            f.write(str(getdate()))
-            f.write(" ")
-            f.write(input())
-            f.write("\n")
+            f.write(str(getdate()) + " " + input() + "\n")
             print(lastmess2)
             f.close()
         else:
@@ -85,19 +73,13 @@ if input1 == 1:
         if input5 == 1:
             print("Hi Hammad", commoninput2)
             f = open("tut32_hammad_exercise.txt", "a")
-            f.write(str(getdate()))
-            f.write(" ")
-            f.write(input())
-            f.write("\n")
+            f.write(str(getdate()) + " " + input() + "\n")
             print(lastmess1)
             f.close()
         elif input5 == 2:
             print("Hi Hammad", commoninput3)
             f = open("tut32_hammad_diet.txt", "a")
-            f.write(str(getdate()))
-            f.write(" ")
-            f.write(input())
-            f.write("\n")
+            f.write(str(getdate()) + " " + input() + "\n")
             print(lastmess2)
             f.close()
         else:
@@ -124,7 +106,7 @@ elif input1 == 2:
         else:
             print(lastmess3)
     elif input6 == 2:
-        input8 = int(input("Enter 1 to retrieve exercise details or 2 for diet details:\n"))
+        input8 = int(input(commoinput4))
         if input8 == 1:
             print("Hi Rohan", commoinput5)
             f = open("tut32_Rohan_exercise.txt", "r")
@@ -140,7 +122,7 @@ elif input1 == 2:
         else:
             print(lastmess3)
     elif input6 == 3:
-        input9 = int(input("Enter 1 to retrieve exercise details or 2 for diet details:\n"))
+        input9 = int(input(commoinput4))
         if input9 == 1:
             print("Hi Hammad", commoinput5)
             f = open("tut32_hammad_exercise.txt", "r")
