@@ -1,4 +1,4 @@
-# Exercise - 3, Guess game
+# Guess game
 # take input from user
 # inform user number is bigger than 18 or lesser than 18 with number of guess left
 # no of guesses should limited to 9
