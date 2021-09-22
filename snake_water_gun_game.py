@@ -96,7 +96,7 @@ while (True):
         invldinp = invldinp + 1
         n = n-1
         if n == 0:
-            print("Maximum number reached, Game over!")
+            print("Maximum attempts reached, Game over!")
             break
         continue
 print(f"Maximum level reached and you won {w} times, computer won {l} times, {d} times game draw and you enter"
