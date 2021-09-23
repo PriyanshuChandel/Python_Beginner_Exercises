@@ -17,78 +17,69 @@ w = 0
 l = 0
 d = 0
 invldinp = 0
-while (True):
-    usrinp = input("Enter your choice, Press S for snake W for water and G for gun:\n")
+while (n<=10):
+    usrinp = input("Enter your choice, Press S for snake W for water and G for gun:\n").upper()
     if usrinp == "G" and computerchoice == "Gun":
-        print("Draw!")
+        print("Draw!, you and bot both got 0 point" )
         d = d+1
         n = n-1
         if n == 0:
-            print("Maximum number reached, Game over!")
             break
         continue
     elif usrinp == "G" and computerchoice == "Water":
-        print("You lost!")
+        print("You lost!, you got 0 point and bot got 1 point")
         l = l+1
         n = n-1
         if n == 0:
-            print("Maximum number reached, Game over!")
             break
         continue
     elif usrinp == "G" and computerchoice == "Snake":
-        print("You Won!")
+        print("You Won!, you got 1 point and bot got 0 point")
         w = w+1
         n = n-1
         if n == 0:
-            print("Maximum number reached, Game over!")
             break
         continue
     elif usrinp == "S" and computerchoice == "Snake":
-        print("Draw")
+        print("Draw!, you and bot both got 0 point")
         d = d+1
         n = n-1
         if n == 0:
-            print("Maximum number reached, Game over!")
             break
         continue
     elif usrinp == "S" and computerchoice == "Water":
-        print("You Won!")
+        print("You Won!, you got 1 point and bot got 0 point")
         w = w+1
         n = n-1
         if n == 0:
-            print("Maximum number reached, Game over!")
             break
         continue
     elif usrinp == "S" and computerchoice == "Gun":
-        print("You lost")
+        print("You lost!, you got 0 point and bot got 1 point")
         l = l+1
         n = n-1
         if n == 0:
-            print("Maximum number reached, Game over!")
             break
         continue
     elif usrinp == "W" and computerchoice == "Water":
-        print("Draw")
+        print("Draw!, you and bot both got 0 point")
         d = d+1
         n = n-1
         if n == 0:
-            print("Maximum number reached, Game over!")
             break
         continue
     elif usrinp == "W" and computerchoice == "Gun":
-        print("You Won!")
+        print("You Won!, you got 1 point and bot got 0 point")
         w = w+1
         n = n-1
         if n == 0:
-            print("Maximum number reached, Game over!")
             break
         continue
     elif usrinp == "W" and computerchoice == "Snake":
-        print("You lost")
+        print("You lost!, you got 0 point and bot got 1 point")
         l = l+1
         n = n-1
         if n == 0:
-            print("Maximum number reached, Game over!")
             break
         continue
     elif usrinp!= "G" and "S" and "W":
@@ -96,8 +87,12 @@ while (True):
         invldinp = invldinp + 1
         n = n-1
         if n == 0:
-            print("Maximum attempts reached, Game over!")
             break
         continue
-print(f"Maximum level reached and you won {w} times, computer won {l} times, {d} times game draw and you enter"
-      f" {invldinp} times wrong input.")
+print(f"Maximum level reached and you got {w} points, bot got {l} points.")
+if w>l:
+    print("\nYou got more points than bot and You won!")
+elif w<l:
+    print("\nYou got less points than bot and Bot won!")
+elif w == l:
+    print("\nYou and bot got same points and Game draw!")
