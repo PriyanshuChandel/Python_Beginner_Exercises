@@ -1,6 +1,8 @@
 - 👋 Hi, I’m @PriyanshuChandel
 - 👀 I’m interested in coding
 - 🌱 I’m currently learning python
+- In this reposetary, I'm posting python begineers exercisses.
+- experts are welcomed to checkout the proframs and give feedback.
 - 📫 reachable on chandelpriyanshu8@outlook.com
 
 <!---
