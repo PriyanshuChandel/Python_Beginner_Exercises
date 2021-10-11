@@ -1,3 +1,13 @@
+# Online library management
+"""create a library class and methods for
+1.Display all book
+2. Lend book (inform who took the book if not available)
+3. Donate book (add book)
+4. Customer return book
+create a object = library (list of book, library_name) and maintain dictionary = (books-nameofperson)
+create a main function and run Infinite while  loop asking user for there input(display, lend, add or return)
+"""
+
 class Liberary:
 
     def __init__(self, list_of_books, liberary_name):
