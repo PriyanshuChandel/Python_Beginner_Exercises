@@ -15,4 +15,9 @@ def pretttify_soldier(path, format):
         if f.endswith(format):
             os.renames(f, f"{specific_ext_count}_{f}")
             specific_ext_count = specific_ext_count+1
-pretttify_soldier("C:/Users/User/PycharmProjects/PythonTuts/tut80", "jpg")
+            
+            
+print("Welcome to Prettifier Army, Soldier waiting for your command.")
+path_input = input("Enter the path where you want to execute this program.\n:")
+format_input = input("Enter the extension of files, for which you want to do numbering instead of capitalization.\n:")
+pretttify_soldier(path_input, format_input)
