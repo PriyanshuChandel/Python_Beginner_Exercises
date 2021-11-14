@@ -15,7 +15,8 @@ if __name__ =='__main__':
     arts = news_py["articles"]
     values = news_py["totalResults"]
     for article in arts:
-        print(article['title'])
+        print(f"Here is the headline: {article['title']}\nIf you want to read more, please refer to this link: "
+              f"{article['url']}")
         newspaper_reader(article['title'])
         num = num + 1
         compare = values
