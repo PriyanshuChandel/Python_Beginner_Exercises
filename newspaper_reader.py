@@ -15,11 +15,11 @@ if __name__ =='__main__':
     arts = news_py["articles"]
     values = news_py["totalResults"]
     for article in arts:
+        print(article['title'])
         newspaper_reader(article['title'])
         num = num + 1
         compare = values
         if num < compare:
-            print(num)
             newspaper_reader("Moving to the next headline, listen carefully.")
         if num == compare:
             newspaper_reader("Thanks for listening")
