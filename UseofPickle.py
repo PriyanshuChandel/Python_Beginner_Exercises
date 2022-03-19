@@ -3,22 +3,20 @@
 
 import requests
 import pickle
-Download = requests.get("https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data")
-Data = [Download]
-file = "tut85_exercise10.txt"
+#Data download
+Download = requests.get("https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data").text
+#Listing
+list1 = Download.split("\n")
+list2 = [item.split(",") for item in list1 if len(item)!=0]
+# print(list2)
+#Pickling
+file = "IrisData.pkl"
 fileobj = open(file, "wb")
-pickle.dump(Data, fileobj)
+pickle.dump(list2, fileobj)
 fileobj.close()
 
-file1 = open("tut85_exercise10.txt")
-for line in file1:
-    list = [file1.readlines()]
-file2 = "tut85_exercise10.pkl"
-fileobj2 = open(file2, "wb")
-pickle.dump(list, fileobj2)
-fileobj2.close()
-
-file3 = "tut85_exercise10.pkl"
-fileobj3 = open(file3, "rb")
-Unpick = pickle.load(fileobj3)
-print(Unpick)
+#Unpickling
+# file = "IrisData.pkl"
+# fileobj = open(file, "rb")
+# mycar = pickle.load(fileobj)
+# print(mycar)
