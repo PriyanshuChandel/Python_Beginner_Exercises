@@ -1,5 +1,58 @@
 from random import randint
 
+#Metthod-1
+def guess_game(player):
+    num1 = int(input(f'{player}, Please enter first number:'))
+    num2 = int(input(f'{player}, Please enter second number:'))
+    randNum = randint(num1, num2)
+    num_of_guess = 0
+    while True:
+        guess = int(input(f'{player} please guess the number!\n'))
+        if guess > randNum:
+            print('You guessed greater number, try again!')
+            num_of_guess = num_of_guess + 1
+            continue
+        if guess < randNum:
+            print('You guessed lesser number, try again!')
+            num_of_guess = num_of_guess + 1
+            continue
+        elif guess == randNum:
+            num_of_guess = num_of_guess + 1
+            print(f"Congrats {player}, Correct guess! you took {num_of_guess} tries.")
+        break
+    return num_of_guess
+
+def compare(player_name1,player_name2,p1_tries,p2_tries):
+    if p1_tries > p2_tries:
+        print(f'{player_name2} took {p2_tries} tries...won the game!')
+    elif p2_tries > p1_tries:
+        print(f'{player_name1} took {p1_tries} tries...won the game!')
+    elif p1_tries == p2_tries:
+        print("Match DRAW!")
+
+
+if __name__=="__main__":
+    print('Welcome to Guess Game!')
+    player1_name = input('Enter player-1 name:\n')
+    player2_name = input('Enter player-2 name:\n')
+    while True:
+        player1_try = guess_game(player1_name)
+        print(f"Now it is {player2_name}'s turn")
+        player2_try = guess_game(player2_name)
+        compare(player1_name,player2_name,player1_try,player2_try)
+        user_inp = input(f'Enter "Q" to quite or "C" to continue to play again:').capitalize()
+        if user_inp == "Q":
+            quit()
+        if user_inp == "C":
+            continue
+
+
+
+
+
+
+
+#Method-2
 print('Welcome to Guess Game!')
 player1_name = input('Enter player-1 name:\n')
 player2_name = input('Enter player-2 name:\n')
