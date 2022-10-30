@@ -2,7 +2,7 @@
 - 👀 I’m interested in coding
 - 🌱 I’m currently learning python
 - In this repository, I'm posting python exercise.
-- Experts are welcomed to checkout the proframs and give feedback.
+- Experts are welcomed to checkout and give feedback.
 - 📫 reachable on chandelpriyanshu8@outlook.com
 
 <!---
