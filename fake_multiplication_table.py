@@ -38,6 +38,7 @@ if __name__ == "__main__":
     user_input = int(input('Enter the number for which table need to be checked.\n:'))
     rohanTable = rohan_function(user_input)
     return_index = isCorrect(rohanTable)
+    print(rohanTable)
     if  return_index is not None:
         print(f'Rohan made you fool, his program calculated wrong value {rohanTable[return_index-1]} instead of'
               f' {return_index*user_input} at {return_index}th place.')
