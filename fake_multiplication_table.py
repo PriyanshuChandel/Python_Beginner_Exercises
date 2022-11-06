@@ -20,10 +20,7 @@ from random import randint, choice
 
 
 def rohan_function(num):
-    table = []
-    for n in range(1, 11):
-        val = num * n
-        table.append(val)
+    table = [num * n for n in range(1, 11)]
     table_index = randint(1, 8)
     operators = {'+': add, '-':sub}
     op = choice(list(operators.keys()))
@@ -31,10 +28,7 @@ def rohan_function(num):
     return table
 
 def isCorrect(table):
-    correctTable = []
-    for n in range(1, 11):
-        correctTable.append(table[0] * n)
-    print(correctTable)
+    correctTable = [table[0] * n for n in range(1, 11)]
     for correctItem, rohanItem in zip(correctTable, table):
         if correctItem != rohanItem:
             return table.index(rohanItem) + 1
@@ -43,7 +37,6 @@ def isCorrect(table):
 if __name__ == "__main__":
     user_input = int(input('Enter the number for which table need to be checked.\n:'))
     rohanTable = rohan_function(user_input)
-    print('rphan',rohanTable)
     return_index = isCorrect(rohanTable)
     if  return_index is not None:
         print(f'Rohan made you fool, his program calculated wrong value {rohanTable[return_index-1]} instead of'
