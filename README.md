@@ -10,5 +10,5 @@ To get started with these exercises, simply clone this repository to your local 
 If you'd like to contribute to this repository, you're welcome to submit new exercises or improve the existing ones. To do so, simply fork this repository, make your changes, and submit a pull request. Make sure to follow the existing code style and include tests for your changes.
 
 
-Contact
+## Contact
 If you have any questions or suggestions, feel free to contact me at chandelpriyanshu8@outlook.com.
